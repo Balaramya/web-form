@@ -1,0 +1,213 @@
+<html>
+<head>
+<title>Fosil</title>
+<link rel="stylesheet" type="text/css" href="css/fosilbj.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript">
+function formvalidate()
+{
+  
+  /*var user=document.forms["myform"]["first"].value;*/
+  var mail=document.forms["myform"]["mail"].value;
+  var pwd=document.forms["myform"]["pwd"].value;
+  /*var uid = user.length;*/
+  var passcode = pwd.length;
+  var mail1 = /^([A-Za-z_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  var regularExpression = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+  
+  /*if(user== "")
+    {
+      alert("enter user name");
+      return false;
+    }
+  if(uid < 6 || uid > 12)
+  {
+  alert("Please enter valied User name");
+      return false;
+  }*/
+     
+   
+      if(!mail1.test(mail)) 
+    {
+        alert("Email id must contain characters along with the @ and .");
+        
+        return false;
+    }
+
+
+
+
+
+    if(pwd== "")
+    {
+      alert("Please enter password");
+      return false;
+    }
+    if(passcode < 8 || passcode > 16)
+    {
+          alert("Please enter valid password");
+              return false;
+    } 
+    
+      if(!regularExpression.test(pwd)) 
+    {
+        alert("password must contain one number,special character, and one uppercase letter");
+        
+        return false;
+      }
+  
+
+}
+
+</script>
+
+</head>
+<body onload="alert('This is page load');">
+  
+   <div class="container">
+   <div class="col-3">
+ 
+  </div>
+
+  <div id="color">
+  <center>
+  <form name="myform" method="post" onsubmit="return formvalidate()">
+ 
+          <img class="img-responsive" src="img/flogo.png" alt="Fosil image">			              
+ 
+			                   
+			                       
+ 
+     
+       <div class="row">
+         <div class="col-3">
+         </div>
+         <div class="col-6">
+             <label for="email" class="control-label" class="col-12">Email address</label>
+             <input type="text" class="form-control main-form" id="mail" name="mail" placeholder="Emailid">input
+{
+  height:10%;
+}
+         </div>
+         <div class="col-3">
+         </div>
+         <div class="errmsg" id="mes"></div>
+        </div>
+
+
+         <div class="row">
+         <div class="col-3">
+         </div>
+         <div class="col-6">
+             <label for="pwd" class="control-label" class="col-3">Password</label>
+               <input type="password" class="form-control main-form" id="pwd" name="pwd" placeholder="password">
+                <div class="errmsg" id="mes1"></div>    		     
+         </div>
+         <div class="col-3">
+         </div>
+        </div>
+        
+
+
+
+    
+ 
+                        <br>
+					    <div id="form">
+					    <div class="text-info">
+						             <p>Forget password?</p>
+						</div>				
+						</div>
+								 <div id="but">  
+								   <button type="submit" class="btn btn-primary btn-sm">Log in</button>
+
+
+
+		                         </div>
+
+</center>
+</form>
+
+
+
+<div class="col-3">
+ </div>
+</div>
+</div>	
+			     
+
+
+
+
+<!--function formvalidate()
+{
+
+  if (validateemail()) 
+  {
+  if(pwdvalidate())
+        {
+
+        }
+return false;
+}
+
+function validateemail()
+{
+                var email = document.getElementById('email2').value;
+                var email1=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                  if (email1.test(email)==false)
+                   {
+                     document.getElementById('mes').innerHTML="email field should contain the pattern of example@exe.com";
+                      return false;
+                  }
+                  else
+                    document.getElementById('mes').innerHTML="";
+                    return true;
+}
+function pwdvalidate()
+{
+                      var pwd=document.getElementById('pwd').value;
+                      if(pwd=="")
+                      {
+                         document.getElementById('mes1').innerHTML="please enter password";
+                      }
+}-->
+
+
+<script src="https:code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</div>
+		</body>
+		     <!-- <div id="body">
+			               <div id="image">
+			                        <img src="img/flogo.png" alt="image">
+			                </div>        
+			               <div id="user">
+			                         <input type="text" value="User Name">
+			                </div>
+						   <div id="pw">
+						           <input type="text" value="Password">
+						    </div>
+						   <p>Forget password?</p>
+						   <button>Log in</button>
+				</div>
+        </div>
+        </center> -->   
+		
+		<div id="footer">
+		<div class="container foot1">
+
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">   
+            
+
+                       <img src="img/flogo.png" class="img-responsive" alt="image" style="width:100px;height:40px";>
+            
+            <div id="foot">
+					             <span id="foot1">Mobile</span>
+					             <span id="foot1">Language/Sprache/Idioma</span>
+            </div>
+
+        </footer>     
+</nav>
+</html>		
