@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Sign
+
+	</title>
+<link rel="stylesheet" type="text/css" href="css/sign.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script type="text/javascript">
+function formvalidate()
+{
+
+  var user=document.forms["myforms"]["user"].value;
+	var email=document.forms["myforms"]["mail"].value;
+ 
+	
+	 
+  var uid = user.length;
+  if(user== "")
+    {
+      alert("enter user name");
+      return false;
+    }
+     if(uid < 6 || uid > 30)
+  {
+  alert("Please enter valid user name");
+  return false;
+      
+  }
+ 
+  if(email=="")
+  {
+    alert("blank can't be empty");
+   return false;
+  }
+   var mail1 = /^([A-Za-z_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    if(!mail1.test(email)) 
+    {
+        alert("Email id must contain characters along with the @ and .");
+        
+        return false;
+    }
+  
+  
+    var pwd=document.forms["myforms"]["pwd"].value;  
+ 
+  if(pwd== "")
+    {
+      alert("Please enter password");
+      return false;
+    }
+    
+   
+     var regularExpression = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+      if(!regularExpression.test(pwd)) 
+    {
+        alert("password must contain one number,special character, and one uppercase letter");
+        
+        return false;
+    }
+ 
+       if(pwd < 8 || pwd > 16)
+    {
+      alert("Please enter valid password");
+          return false;
+    } 
+
+
+  var rpwd=document.forms["myforms"]["rpwd"];   
+  if(rpwd== "")
+  {
+      alert("Please enter password");
+      return false;
+  }
+ 
+    
+  
+    
+    var regularExpression1 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+  
+      if(!regularExpression1.test(rpwd)) 
+    {
+        alert("password must contain one number,special character, and one uppercase letter");
+        
+        return false;
+    }
+          
+          if(rpwd < 8 || rpwd > 16)
+    {
+      alert("Please enter valid password");
+          return false;
+    } 
+
+}
+
+</script>
+</head>
+<body onload="alert('Page load');">
+
+
+  <div class="container-form"
+          <div id="main1">          
+					           <h2 id="signup">Sign up</h2>
+					        <form name="myforms" method="post" onsubmit="return formvalidate()"> 
+					          
+					           <div>
+					           <label for="user" class="col-12"></label>
+                     <input type="text" class="form-control" name="user" id="user" placeholder=" Username" onclick="return formvalidate()">
+					           </div>
+					           
+					           <div>
+					           <label for="user" class="col-12"></label>
+                     <input type="text" class="form-control" name="mail" id="mail" placeholder="E-mail" onclick="return formvalidate()">
+					           </div>
+					          
+					           <div>
+					           <label for="user" class="col-12"></label>
+                     <input type="password" class="form-control" name="pwd" id="pwd" placeholder=" Password" onclick="return formvalidate()">
+					           </div>
+					           
+					           <div>
+					           <label for="user" class="col-12"></label>
+                     <input type="password" class="form-control" name="rpwd" id="rpwd" placeholder="Retype Password" onclick="return formvalidate()">
+					           </div>
+					           <br>
+     <button type="submit" class="btn btn-warning" onsubmit="return formvalidate()">
+					           	  <a href="els1.html">Sign me up</a>
+					           </button>
+          </div>
+          </form>
+          <div id="main2">
+                   <div id="image">
+                   	 
+                           <img src="img/climate.jpg" class="img-responsive" alt="Log2 image" style="width:900px; height:900px";>
+                    </div>       
+
+                   	<div id="part2">
+	                   	<h2 id="social">
+	                   		Sign in with social network
+	                   	</h2>
+                        <br><br>
+
+                          <button type="submit" class="btn btn-danger" onclick="return formvaliate()">
+                                <a href="fb.html">Log in with facebook</a>
+
+                         </button>
+                         
+                         <br><br>
+                         
+                          <button type="submit" class="btn btn-info" onclick="return formvalidate()">Log in Twitter</button>
+                          <br><br>
+                          <button type="submit" class="btn btn-warning" onclick="return formvalidate()">
+                                   <a href="gm.html">Log in with Google+</a>
+                         </button>
+                          
+                  </div>
+      
+              </div>
+
+  	 
+
+  </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>

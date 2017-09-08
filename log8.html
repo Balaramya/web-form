@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Registration form
+	</title>
+<link rel="stylesheet" type="text/css" href="css/log5.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript">
+
+function formvalidate()
+{
+  
+
+
+  var fname=document.forms["myform"]["first"].value;
+  var lname=document.forms["myform"]["lname"].value;
+  var email=document.forms["myform"]["mail"].value;
+  var email1=document.forms["myform"]["mail1"].value;
+  var pwd=document.forms["myform"]["pwd"].value;
+  var cpwd=document.forms["myform"]["cpwd"].value;  
+  var male=document.forms["myform"]["male"].value;
+  var female=document.forms["myform"]["female"].value;
+  
+  var passcode = pwd.length;
+
+  var regularExpression = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+  
+       var finame = /^[A-Za-z\s]+$/;
+      
+      if(!finame.test(fname))
+      {
+            alert("please enter character in the first name");
+            return false;
+      }      
+      var laname=/^[A-Za-z\s]+$/;
+      if(!laname.test(lname))
+      {
+              alert("please enter charaters for the");
+              return false;
+      } 
+      
+      
+
+      
+       var mail1= /^([A-Za-z_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; 
+       if(!mail1.test(email))
+       {
+                alert("please enter proper email");
+                return false;
+       }
+
+       var email1 = document.forms["myform"]["email"].value;
+       var mail1= /^([A-Za-z_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; 
+       if(!mail1.test(email1))
+       {
+                alert("please enter proper email");
+                return false;
+       }
+    
+
+
+    if(pwd== "")
+    {
+      alert("Please enter password");
+      return false;
+    }
+    if(passcode < 8 || passcode > 16)
+{
+  alert("Please enter valid password");
+      return false;
+  } 
+    
+      if(!regularExpression.test(pwd)) 
+    {
+        alert("password must contain one number,special character, and one uppercase letter");
+        
+        return false;
+      }
+  
+      if(male== false && female==false)
+      {
+            alert("please fill gender field");
+            return false;
+      } 
+
+   
+
+}
+</script>
+
+
+
+</head>
+<body onload="alert('Pages load');">
+    
+      <div id="container-from">
+                  
+            <form name="myform" method="post" onclick="return formvalidate()">
+                   <div id="body">
+                   
+                    <div>
+                       <label for="pwd" class="col-12">First Name:</label>	
+                      <input  id="test" type="text" class="form-control" name="first" id="first" placeholder="firstname" required>
+                    </div>
+                    
+                    <div>
+                      <label for="pwd" class="col-12"> Last name</label>
+                      <input id="test" type="text" class="form-control" name="lname" id="lname" placeholder="Lastname" required>
+                    </div>
+                     
+                    <div >
+                    <label for="pwd" class="col-12">Email id</label>
+                           <input id="test" type="text" class="form-control" name="mail" id="mail" placeholder="Emial" required>
+                    </div>
+                   
+                    <div >
+                       <label for="pwd" class="col-12"> Comform email</label>
+                      <input id="test" type="text" class="form-control" name="mail1" id="mail1" placeholder="conform email" required>
+                    </div>
+                      
+                    <div >
+                    <label for="pwd" class="col-12">Password</label>
+                      <input id="test" type="password" class="form-control" name="pwd" id="pwd" placeholder="password" required>
+                    </div>
+                    
+                    <div >
+                    <label for="pwd" class="col-12"> Comfrom Pasword</label>
+                      <input id="test" type="password" class="form-control" name="cpwd" id="cpwd" placeholder="Cpassword" required>
+                    </div>
+                    <div>
+                     
+                       <label for="pwd" class="col-12"> Gender</label>
+                      <input id="test"  type="radio" class="form-control" name="male" id="male" placeholder="" required>Male
+                       <label for="pwd" class="col-12"></label>
+                      <input id="test" type="radio" class="form-control" name="female" id="female" placeholder="" required>Female
+                     </div>   
+                      <button type="submit" class="btn btn-warning">
+                      	
+                      	Register
+                      </button>
+                             	
+                   </div><!--body-->
+            </form>
+      </div><!--main-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+</html>

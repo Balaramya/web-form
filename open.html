@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OPen source</title>
+ 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/logbj2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript">
+	function formvalidate()
+  {
+	
+	   var fname = document.forms["myform"]["first"].value;
+      var finame = /^[A-Za-z\s]+$/;
+      
+      if(!finame.test(fname))
+      {
+            alert("please enter character in the first name");
+            return false;
+      }      
+
+
+       var email = document.forms["myform"]["email"].value;
+       var mail1= /^([A-Za-z_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; 
+       if(!mail1.test(email))
+       {
+                alert("please enter proper email");
+                return false;
+       }
+
+        var pwd=document.forms["myform"]["pwd"].value;
+        var passcode = pwd.length;
+        var regularExpression = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+         if(pwd== "")
+    {
+      alert("Please enter password");
+      return false;
+    }
+    if(passcode < 8 || passcode > 16)
+    {
+          alert("Please enter valid password");
+              return false;
+    } 
+    
+      if(!regularExpression.test(pwd)) 
+    {
+        alert("password must contain one number,special character, and one uppercase letter");
+        
+        return false;
+      }
+
+	
+}	
+
+</script> 
+</head>
+<body onload="alert('Page load')"> 
+<div id="back">
+  <div class="container-form">
+    
+    <header>
+          <img class="img-responsive" src="img/open.png" alt="open source"  style="width: 90px;height: 65px";>
+    </header>
+   <center>
+    <div class=text-primary><h3>OPEN SOURCE</h3> </div>   
+   <div id="form">      
+
+<form class="container-form" name="myform" method="post" onsubmit="return validateForm()">
+    <label for="email" class="col-12"></label>
+      <div class="col-4">
+            <input id="op" type="text" class="form-control" id="first" name="first" placeholder="First Name" onblur="return formvalidate()"> 
+           <div class="errmsg" id="msg2"></div>
+   </div>      
+    <label for="email" class="col-12"></label>
+    <input id="op" type="email" class="form-control" id="email1" name="email"  placeholder="emailid" onblur="return formvalidate()"> 
+   <div class="errmsg" id="msg2"></div>
+ 
+    <label for="pwd" class="col-12"></label>
+    <input id="op" type="password" class="form-control" id="Pwd" name="pwd" placeholder="password"  onblur="return formvalidate()">
+    <div class="errmsg" id="msg3"></div>
+
+    <label for="pwd" class="col-12"></label>
+    <input id="op" type="text" class="form-control" id="mn" name="mn" placeholder="Mobile number"  onblur="return formvalidate()">
+    <div class="errmsg" id="msg3"></div>
+      <br>
+     <button type="submit" class="btn btn-primary">Sign in</button>
+     <p>This is for log into the open source to download open source software</p>
+     <p class="text-primary">Advanced option</p>
+ 
+ 
+</form>
+</div>
+</center>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>

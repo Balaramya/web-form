@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		 Twitter
+
+	</title>
+<link rel="stylesheet" type="text/css" href="css/twitter.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script type="text/javascript">
+    function formvalidate()
+{
+
+      var fname = document.forms["myform"]["first"].value;
+      var finame = /^[A-Za-z\s]+$/;
+      
+      if(!finame.test(fname))
+      {
+            alert("please enter character in the first name");
+            return false;
+      }      
+
+       var email = document.forms["myform"]["email"].value;
+       var mail1= /^([A-Za-z_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; 
+       if(!mail1.test(email))
+       {
+                alert("please enter proper email");
+                return false;
+       }
+
+     
+      
+     
+      var pwd=document.forms["myform"]["pwd"].value;
+      var passcode = pwd.length;
+        if(pwd== "")
+    {
+      alert("Please enter password");
+      return false;
+    }
+    if(passcode < 8 || passcode > 16)
+  {
+            alert("Please enter valid password");
+                return false;
+  } 
+    
+      var regularExpression = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/; 
+      if(!regularExpression.test(pwd)) 
+    {
+           alert("password must contain one number,special character, and one uppercase letter");
+        
+        return false;
+    } 
+}
+
+</script>
+</head>
+<body onload="alert('Page load');">
+       <div class="container-fluid">
+                         
+                   <div id="head">
+
+                         <div id="logo">
+                               <img src="img/t.jpg" class="img-responsive" class="img-responsive" alt="image" style="width: 60px;height: 60px";>
+                          </div>
+                               <div id="headr">
+                                
+                                      <span id="lang">  Language English </span>
+                                
+                                    <span id="account">Have account?</span>
+                                    <span id="log">Login</span>
+                                </div>
+                                      
+                    </div>
+
+         <form name="myform" method="post" onsubmit="return formvalidate()">
+            <center>
+                          
+              <div id="body">
+              	<h3>Join Twitter today</h3>
+              <div id="tw">
+              	<label for="pwd" class="col-12"></label>
+                <input type="text" id="twit" class="form-control" name="first" id="first" placeholder="First name" onclick="return formvalidate()">
+              </div>
+               <div id="tw">
+                      <label for="pwd" class="col-12"></label>
+                      <input type="text" id="twit" class="form-control" name="email" id="email" placeholder="Phone or Email" onclick="return formvalidate()">
+               </div>
+               <div id="tw">
+                     <label for="pwd" class="col-12"></label>
+                     <input type="password" id="twit" class="form-control" name="pwd" id="pwd" placeholder="Password" onclick="return formvalidate()">
+                </div>
+                 <br>
+                 <button type="submit" class="btn btn-primary">
+                 	Sign in
+
+                 </button>
+                </form>
+                 <div id="data">
+							                 <p>By signing up, you agree to the Terms of Service and Privacy Policy,</p>
+							                 <p> including Cookie Use. Others will be able to find you by email or phone</p>
+							                 <p>  number when provided.</p>
+							                 <h4>Advanced options</h4>
+
+                 </div>
+             </center>
+
+
+               
+
+
+
+
+
+             </div>
+             
+
+
+
+
+
+
+
+
+
+       </div>     
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
